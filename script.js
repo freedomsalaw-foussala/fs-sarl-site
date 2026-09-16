@@ -1,3 +1,19 @@
+// ================================
+// FORMULAIRE FORMSPREE
+// ================================
+
+window.formspree =
+  window.formspree ||
+  function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+
+formspree('initForm', {
+  formElement: '#contact-form',
+  formId: 'mjykboap'
+});
+
+
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
