@@ -175,24 +175,86 @@
             <a href="tel:+22244215628"><span>Téléphone</span><strong>44 21 56 28 / 49 77 67 33</strong></a>
             <a href="mailto:Freedomsalaw@gmail.com"><span>Email</span><strong>Freedomsalaw@gmail.com</strong></a>
             <a href="https://www.freedomsalaw.com" target="_blank" rel="noopener"><span>Web</span><strong>www.freedomsalaw.com</strong></a>
-            <!--<div><span>NIF</span><strong>01393388</strong></div>-->
+            <!--<div><span>NIF</span><strong>00000000</strong></div>-->
             <div><span>Zone d’intervention</span><strong>Nouakchott, Mauritanie</strong></div>
           </div>
         </div>
-        <form class="contact-form" action="mailto:Freedomsalaw@gmail.com" method="post" enctype="text/plain">
-          <label>Nom / Entreprise<input name="Nom" required placeholder="Votre nom ou entreprise"></label>
-          <label>Téléphone<input name="Téléphone" required placeholder="Votre numéro"></label>
-          <label>Service souhaité
-            <select name="Service">
-              <option>Réseau informatique</option>
-              <option>Vidéosurveillance</option>
-              <option>Sécurité incendie</option>
-              <option>Audit technique</option>
-              <option>Autre</option>
-            </select>
+        
+        <div data-fs-success class="form-success">
+          ✓ Votre demande a bien été envoyée.
+        </div>
+        
+        <div data-fs-error class="form-error"></div>
+        
+        <form id="contact-form" class="contact-form">
+        
+          <label>
+            Nom / Entreprise
+            <input
+              type="text"
+              name="nom"
+              required
+              placeholder="Votre nom ou entreprise"
+              data-fs-field
+            >
+            <span data-fs-error="nom"></span>
           </label>
-          <label>Votre besoin<textarea name="Message" rows="5" placeholder="Décrivez brièvement votre besoin"></textarea></label>
-          <button class="btn btn-primary btn-full" type="submit">Envoyer ma demande</button>
+        
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Votre adresse e-mail"
+              data-fs-field
+            >
+            <span data-fs-error="email"></span>
+          </label>
+        
+          <label>
+            Téléphone
+            <input
+              type="tel"
+              name="telephone"
+              required
+              placeholder="Votre numéro"
+              data-fs-field
+            >
+            <span data-fs-error="telephone"></span>
+          </label>
+        
+          <label>
+            Service souhaité
+            <select name="service" data-fs-field>
+              <option value="Réseau informatique">Réseau informatique</option>
+              <option value="Vidéosurveillance">Vidéosurveillance</option>
+              <option value="Sécurité incendie">Sécurité incendie</option>
+              <option value="Audit technique">Audit technique</option>
+              <option value="Autre">Autre</option>
+            </select>
+            <span data-fs-error="service"></span>
+          </label>
+        
+          <label>
+            Votre besoin
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Décrivez brièvement votre besoin"
+              data-fs-field
+            ></textarea>
+            <span data-fs-error="message"></span>
+          </label>
+        
+          <button
+            class="btn btn-primary btn-full"
+            type="submit"
+            data-fs-submit-btn
+          >
+            Envoyer ma demande
+          </button>
+        
         </form>
       </div>
     </section>
@@ -211,6 +273,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="script.js"></script>
 </body>
 </html>
