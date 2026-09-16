@@ -139,3 +139,49 @@ h1 span{color:var(--green)}
   .footer-grid{display:block}
   .footer-right{align-items:flex-start;text-align:left;margin-top:24px}
 }
+/* Message de succès Formspree */
+.form-success {
+  display: none;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #e8f7ee;
+  border: 1px solid #b7e4c7;
+  color: #187a3d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Formspree affiche automatiquement data-fs-active */
+.form-success[data-fs-active] {
+  display: block;
+}
+
+/* Message d'erreur */
+.form-error {
+  display: none;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #fff0f0;
+  border: 1px solid #f0b8b8;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.form-error[data-fs-active] {
+  display: block;
+}
+
+/* Erreur sur un champ */
+[data-fs-field][aria-invalid="true"] {
+  border-color: #d92d20;
+}
+
+/* Messages d'erreur sous les champs */
+[data-fs-error] {
+  color: #d92d20;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
