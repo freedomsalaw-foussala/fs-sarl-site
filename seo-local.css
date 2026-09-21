@@ -1,0 +1,9 @@
+.seo-local-section{background:#f5f8fb}
+.seo-local-section .section-heading{max-width:900px}
+.seo-local-section .section-heading p:last-child{font-size:18px;color:#6d7e90;line-height:1.7}
+.seo-local-links{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.seo-local-links a{padding:16px 18px;background:#fff;border:1px solid #dbe4ec;border-radius:12px;color:#06224c;font-weight:800;box-shadow:0 8px 22px rgba(7,34,76,.05)}
+.seo-local-links a:hover{transform:translateY(-2px);border-color:#48b631}
+.service-more{margin:0 24px 24px;width:calc(100% - 48px)}
+@media(max-width:900px){.seo-local-links{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.seo-local-links{grid-template-columns:1fr}}
